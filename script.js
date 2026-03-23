@@ -18,31 +18,35 @@ write logic to play single round
 whole game will be 5 rounds
 function playGame will call playRound 5 times
 */
-function playGame() {}
+function playGame(playRound, nRounds) {}
 
 let humanScore = 0;
 let computerScore = 0;
+let computerChoice = "";
 
 function playRound() {
-    let computerChoice = "";
         function getComputerChoice() {
-            return Math.floor(Math.random() * 3);
+        return Math.floor(Math.random() * 3);
         }
 
-            if (getComputerChoice() === 0) {
-                computerChoice = "rock";
-            } else if (getComputerChoice() === 1) {
-                computerChoice = "paper";
-            } else if (getComputerChoice === 2) {
-                computerChoice = "scissors";
-            } else {
-                computerChoice = NaN;
-            }
+        if (getComputerChoice() === 0) {
+            computerChoice = "rock";
+        } else if (getComputerChoice() === 1) {
+            computerChoice = "paper";
+        } else if (getComputerChoice === 2) {
+            computerChoice = "scissors";
+        } else {
+            computerChoice = NaN;
+        }
 
     function getHumanChoice() {
-        let userInput = prompt("Enter your choice", 0)
-        if (userInput !== null) {
-            const humanChoice = userInput.toUpperCase; 
+        let humanChoice = prompt("Please enter your choice. Rock, paper, or scissors.");
+
+        if (humanChoice !== null && humanChoice !== "") {
+            return humanChoice;
+        } else {
+            console.log("Invalid input.");
+            return null;
         }
     }
     
@@ -61,8 +65,11 @@ function playRound() {
             computerScore += 0;
         }
     }
-    
 }
+
+
+    
+
     
 /*  */
 
