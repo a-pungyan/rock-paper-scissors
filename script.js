@@ -39,24 +39,29 @@ function playRound() {
                 computerChoice = NaN;
             }
 
-    let userInput = prompt("Enter your choice", 0)
+    function getHumanChoice() {
+        let userInput = prompt("Enter your choice", 0)
         if (userInput !== null) {
             const humanChoice = userInput.toUpperCase; 
         }
-    
-    if ((humanChoice = "rock") && (computerChoice = "paper")) {
-        humanScore += 1;
-    } else if ((humanChoice = "paper") && (computerChoice = "rock")) {
-        humanScore += 1;
-    } else if ((humanChoice = "scissors") && (computerChoice = "paper")) {
-        humanScore += 1;
-    } else if (humanChoice == computerChoice) {
-        humanScore += 0;
-        computerScore += 0;
-    } else {
-        humanScore += 0;
-        computerScore += 0;
     }
+    
+    function didUserWin(humanChoice, computerChoice) {
+        if ((humanChoice = "rock") && (computerChoice = "paper")) {
+            humanScore += 1;
+        } else if ((humanChoice = "paper") && (computerChoice = "rock")) {
+            humanScore += 1;
+        } else if ((humanChoice = "scissors") && (computerChoice = "paper")) {
+            humanScore += 1;
+        } else if (humanChoice == computerChoice) {
+            humanScore += 0;
+            computerScore += 0;
+        } else {
+            humanScore += 0;
+            computerScore += 0;
+        }
+    }
+    
 }
     
 /*  */
