@@ -18,7 +18,6 @@ write logic to play single round
 whole game will be 5 rounds
 function playGame will call playRound 5 times
 */
-function playGame() {}
 
 let humanScore = 0;
 let computerScore = 0;
@@ -57,6 +56,15 @@ function playRound() {
         humanScore += 0;
         computerScore += 0;
     }
+}
+
+function playGame() {
+    playRound();
+    playRound();
+    playRound();
+    playRound();
+    playRound();
+
 }
     
 /*  */
