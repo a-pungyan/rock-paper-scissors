@@ -7,7 +7,7 @@ console.log("Test");
 function getHumanChoice 
     hint: prompt() to get user's input
     
-two variables for scores, humanScore, computerScore
+two variables for scores, humanScore, 
     must initialize to 0
     make case insensitive
     
@@ -18,11 +18,15 @@ write logic to play single round
 whole game will be 5 rounds
 function playGame will call playRound 5 times
 */
-function playGame() {
-    if {
+
+let gameState = "preGame"
+
+function playGame(gameState) {
+    var gameState = "inGame";
+    if (humanScore < 5 && computerScore < 5) {
         playRound();
-        updateScore();
-    } else humanScore === 5 || computerScore === 5 {
+    } else if (humanScore === 5 || computerScore === 5) {
+        gameState ="gameOver";
         return;
     }
 }
@@ -74,18 +78,38 @@ function playRound() {
     }
 }
 
-function updateHumanScore() {
-    if humanScore === 0 {
-        document.getElementById("youTally").src="";
-    } else if {
-        humanScore === 1 {
-            document.getElementById("youTally").src="/assets/pictures/tally1"
-        }
+function updateHumanScore(humanScore) {
+    if (humanScore === 0) {
+        document.getElementById("you").src="";
+    } else if (humanScore === 1) {
+        document.getElementById("you").src="pictures/tally1.PNG";
+    } else if (humanScore === 2) {
+        document.getElementById("you").src="pictures/tally2.PNG";
+    } else if (humanScore === 3) {
+        document.getElementById("you").src="pictures/tally3.PNG";
+    } else if (humanScore === 4) {
+        document.getElementById("you").src="pictures/tally4.PNG";
+    } else if (humanScore === 5) {
+        document.getElementById("you").src="pictures/tally5.PNG";
+    } else {
+        return; 
     }
 }
 
-    
-
-    
-/*  */
-
+function updateComputerScore(computerScore) {
+    if (computerScore === 0) {
+        document.getElementById("you").src="";
+    } else if (computerScore === 1) {
+        document.getElementById("you").src="pictures/tally1.PNG";
+    } else if (computerScore === 2) {
+        document.getElementById("you").src="pictures/tally2.PNG";
+    } else if (computerScore === 3) {
+        document.getElementById("you").src="pictures/tally3.PNG";
+    } else if (computerScore === 4) {
+        document.getElementById("you").src="pictures/tally4.PNG";
+    } else if (computerScore === 5) {
+        document.getElementById("you").src="pictures/tally5.PNG";
+    } else {
+        return;
+    }
+}
