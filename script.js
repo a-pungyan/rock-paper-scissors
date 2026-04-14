@@ -35,7 +35,7 @@ let humanScore = 0;
 let computerScore = 0;
 let computerChoice = "";
 
-function playRound() {
+function playRound(humanChoice, computerChoice) {
         function getComputerChoice() {
         return Math.floor(Math.random() * 3);
         }
