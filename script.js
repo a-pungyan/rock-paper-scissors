@@ -19,8 +19,11 @@ whole game will be 5 rounds
 function playGame will call playRound 5 times
 */
 function playGame() {
-    for ( i = 0 ; i <= 5 ; i ++ ) {
-        playRound()
+    if {
+        playRound();
+        updateScore();
+    } else humanScore === 5 || computerScore === 5 {
+        return;
     }
 }
 
@@ -71,6 +74,15 @@ function playRound() {
     }
 }
 
+function updateHumanScore() {
+    if humanScore === 0 {
+        document.getElementById("youTally").src="";
+    } else if {
+        humanScore === 1 {
+            document.getElementById("youTally").src="/assets/pictures/tally1"
+        }
+    }
+}
 
     
 

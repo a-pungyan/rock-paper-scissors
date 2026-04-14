@@ -24,15 +24,29 @@ h1, h2, p {
 }
 
 .options img {
-    height: 200px;
+    height: 300px;
+    margin: 60px 0;
 }
 
 .idScore {
     display: flex;
     justify-content: center;
+    margin: 20px 0;
 }
 
-.you {
-    margin: 0 20px 0 20px;
-    background-color: red;
+.idScore img {
+    height: 80px;
+    margin: -10px 0 0 -50px;
+}
+
+#computer {
+    margin: 0 60px;
+    display: flex;
+    flex-direction: column;
+}
+
+#you {
+    margin: 0 60px;
+    display: flex;
+    flex-direction: column;
 }
