@@ -18,46 +18,63 @@ write logic to play single round
 whole game will be 5 rounds
 function playGame will call playRound 5 times
 */
+<<<<<<< HEAD
+=======
+function playGame() {
+    for ( i = 0 ; i <= 5 ; i ++ ) {
+        playRound()
+    }
+}
+>>>>>>> f30b4f8762a2907e44e732e822f823fdd9488e57
 
 let humanScore = 0;
 let computerScore = 0;
+let computerChoice = "";
 
 function playRound() {
-    let computerChoice = "";
         function getComputerChoice() {
-            return Math.floor(Math.random() * 3);
+        return Math.floor(Math.random() * 3);
         }
 
-            if (getComputerChoice() === 0) {
-                computerChoice = "rock";
-            } else if (getComputerChoice() === 1) {
-                computerChoice = "paper";
-            } else if (getComputerChoice === 2) {
-                computerChoice = "scissors";
-            } else {
-                computerChoice = NaN;
-            }
-
-    let userInput = prompt("Enter your choice", 0)
-        if (userInput !== null) {
-            const humanChoice = userInput.toUpperCase; 
+        if (getComputerChoice() === 0) {
+            computerChoice = "rock";
+        } else if (getComputerChoice() === 1) {
+            computerChoice = "paper";
+        } else if (getComputerChoice === 2) {
+            computerChoice = "scissors";
+        } else {
+            computerChoice = NaN;
         }
+
+    function getHumanChoice() {
+        let humanChoice = prompt("Please enter your choice. Rock, paper, or scissors.");
+
+        if (humanChoice !== null && humanChoice !== "") {
+            return humanChoice;
+        } else {
+            console.log("Invalid input.");
+            return null;
+        }
+    }
     
-    if ((humanChoice = "rock") && (computerChoice = "paper")) {
-        humanScore += 1;
-    } else if ((humanChoice = "paper") && (computerChoice = "rock")) {
-        humanScore += 1;
-    } else if ((humanChoice = "scissors") && (computerChoice = "paper")) {
-        humanScore += 1;
-    } else if (humanChoice == computerChoice) {
-        humanScore += 0;
-        computerScore += 0;
-    } else {
-        humanScore += 0;
-        computerScore += 0;
+    function didUserWin(humanChoice, computerChoice) {
+        if ((humanChoice = "rock") && (computerChoice = "paper")) {
+            humanScore += 1;
+        } else if ((humanChoice = "paper") && (computerChoice = "rock")) {
+            humanScore += 1;
+        } else if ((humanChoice = "scissors") && (computerChoice = "paper")) {
+            humanScore += 1;
+        } else if (humanChoice == computerChoice) {
+            humanScore += 0;
+            computerScore += 0;
+        } else {
+            humanScore += 0;
+            computerScore += 0;
+        }
     }
 }
 
+<<<<<<< HEAD
 function playGame() {
     playRound();
     playRound();
@@ -66,6 +83,11 @@ function playGame() {
     playRound();
 
 }
+=======
+
+    
+
+>>>>>>> f30b4f8762a2907e44e732e822f823fdd9488e57
     
 /*  */
 
