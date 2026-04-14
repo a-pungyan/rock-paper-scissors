@@ -74,8 +74,11 @@ function playRound(humanChoice, computerChoice) {
         } else {
             humanScore += 0;
             computerScore += 0;
+            return;
         }
     }
+
+    return;
 }
 
 function updateHumanScore(humanScore) {
