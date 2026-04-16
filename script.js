@@ -7,7 +7,7 @@ console.log("Test");
 function getHumanChoice 
     hint: prompt() to get user's input
     
-two variables for scores, humanScore, computerScore
+two variables for scores, humanScore, 
     must initialize to 0
     make case insensitive
     
@@ -19,10 +19,23 @@ whole game will be 5 rounds
 function playGame will call playRound 5 times
 */
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 function playGame() {
     for ( i = 0 ; i <= 5 ; i ++ ) {
         playRound()
+=======
+
+let gameState = "preGame"
+
+function playGame(gameState) {
+    var gameState = "inGame";
+    if (humanScore < 5 && computerScore < 5) {
+        playRound();
+    } else if (humanScore === 5 || computerScore === 5) {
+        gameState ="gameOver";
+        return;
+>>>>>>> a11c51fb282862ede55f8f3a5d3aa84d15e35641
     }
 }
 >>>>>>> f30b4f8762a2907e44e732e822f823fdd9488e57
@@ -31,7 +44,7 @@ let humanScore = 0;
 let computerScore = 0;
 let computerChoice = "";
 
-function playRound() {
+function playRound(humanChoice, computerChoice) {
         function getComputerChoice() {
         return Math.floor(Math.random() * 3);
         }
@@ -70,10 +83,32 @@ function playRound() {
         } else {
             humanScore += 0;
             computerScore += 0;
+            return;
         }
+    }
+
+    return;
+}
+
+function updateHumanScore(humanScore) {
+    if (humanScore === 0) {
+        document.getElementById("you").src="";
+    } else if (humanScore === 1) {
+        document.getElementById("you").src="pictures/tally1.PNG";
+    } else if (humanScore === 2) {
+        document.getElementById("you").src="pictures/tally2.PNG";
+    } else if (humanScore === 3) {
+        document.getElementById("you").src="pictures/tally3.PNG";
+    } else if (humanScore === 4) {
+        document.getElementById("you").src="pictures/tally4.PNG";
+    } else if (humanScore === 5) {
+        document.getElementById("you").src="pictures/tally5.PNG";
+    } else {
+        return; 
     }
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 function playGame() {
     playRound();
@@ -91,3 +126,22 @@ function playGame() {
     
 /*  */
 
+=======
+function updateComputerScore(computerScore) {
+    if (computerScore === 0) {
+        document.getElementById("you").src="";
+    } else if (computerScore === 1) {
+        document.getElementById("you").src="pictures/tally1.PNG";
+    } else if (computerScore === 2) {
+        document.getElementById("you").src="pictures/tally2.PNG";
+    } else if (computerScore === 3) {
+        document.getElementById("you").src="pictures/tally3.PNG";
+    } else if (computerScore === 4) {
+        document.getElementById("you").src="pictures/tally4.PNG";
+    } else if (computerScore === 5) {
+        document.getElementById("you").src="pictures/tally5.PNG";
+    } else {
+        return;
+    }
+}
+>>>>>>> a11c51fb282862ede55f8f3a5d3aa84d15e35641

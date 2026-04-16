@@ -1,0 +1,52 @@
+@font-face {
+    font-family: custom;
+    src: url(/assets/fonts/poppins.regular.ttf);
+}
+
+h1, h2, p {
+    font-family: custom;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#first  {
+    margin: -10px 0 30px 0;
+    font-size: 1.5em;
+}
+
+.options {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.options img {
+    height: 300px;
+    margin: 60px 0;
+}
+
+.idScore {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.idScore img {
+    height: 80px;
+    margin: -10px 0 0 -50px;
+}
+
+#computer {
+    margin: 0 60px;
+    display: flex;
+    flex-direction: column;
+}
+
+#you {
+    margin: 0 60px;
+    display: flex;
+    flex-direction: column;
+}
