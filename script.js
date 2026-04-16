@@ -28,53 +28,50 @@ function playGame(gameState) {
     } else if (humanScore === 5 || computerScore === 5) {
         gameState ="gameOver";
         return;
-
+    }}
+    
 let humanScore = 0;
 let computerScore = 0;
 let computerChoice = "";
 
-function playRound(humanChoice, computerChoice) {
-        function getComputerChoice() {
-        return Math.floor(Math.random() * 3);
-        }
-
-        if (getComputerChoice() === 0) {
-            computerChoice = "rock";
-        } else if (getComputerChoice() === 1) {
-            computerChoice = "paper";
-        } else if (getComputerChoice === 2) {
-            computerChoice = "scissors";
-        } else {
-            computerChoice = NaN;
-        }
-
-    function getHumanChoice() {
-        let humanChoice = prompt("Please enter your choice. Rock, paper, or scissors.");
-
-        if (humanChoice !== null && humanChoice !== "") {
-            return humanChoice;
-        } else {
-            console.log("Invalid input.");
-            return null;
-        }
-    }
+function getComputerChoice() {
+    return Math.floor(Math.random() * 3);
     
-    function didUserWin(humanChoice, computerChoice) {
-        if ((humanChoice = "rock") && (computerChoice = "paper")) {
-            humanScore += 1;
-        } else if ((humanChoice = "paper") && (computerChoice = "rock")) {
-            humanScore += 1;
-        } else if ((humanChoice = "scissors") && (computerChoice = "paper")) {
-            humanScore += 1;
-        } else if (humanChoice == computerChoice) {
-            humanScore += 0;
-            computerScore += 0;
-        } else {
-            humanScore += 0;
-            computerScore += 0;
-            return;
-        }
+    if (getComputerChoice() === 0) {
+        return "rock";
+    } else if (getComputerChoice() === 1) {
+        return "paper";
+    } else if (getComputerChoice() === 2) {
+        return "scissors";
+    } else {
+        return NaN;
+}}
+
+
+
+function getHumanChoice() {
+    document.getElementById("rock").addEventListener("click")
+}
+
+
+function didUserWin(humanChoice, computerChoice) {
+    if ((humanChoice = "rock") && (computerChoice = "paper")) {
+        humanScore += 1;
+    } else if ((humanChoice = "paper") && (computerChoice = "rock")) {
+        humanScore += 1;
+    } else if ((humanChoice = "scissors") && (computerChoice = "paper")) {
+        humanScore += 1;
+    } else if (humanChoice == computerChoice) {
+        humanScore += 0;
+        computerScore += 0;
+    } else {
+        humanScore += 0;
+        computerScore += 0;
+        return;
     }
+}
+
+function playRound(humanChoice, computerChoice) { 
 
     return;
 }
@@ -99,17 +96,17 @@ function updateHumanScore(humanScore) {
 
 function updateComputerScore(computerScore) {
     if (computerScore === 0) {
-        document.getElementById("you").src="";
+        document.getElementById("computer").src="";
     } else if (computerScore === 1) {
-        document.getElementById("you").src="pictures/tally1.PNG";
+        document.getElementById("computer").src="pictures/tally1.PNG";
     } else if (computerScore === 2) {
-        document.getElementById("you").src="pictures/tally2.PNG";
+        document.getElementById("computer").src="pictures/tally2.PNG";
     } else if (computerScore === 3) {
-        document.getElementById("you").src="pictures/tally3.PNG";
+        document.getElementById("computer").src="pictures/tally3.PNG";
     } else if (computerScore === 4) {
-        document.getElementById("you").src="pictures/tally4.PNG";
+        document.getElementById("computer").src="pictures/tally4.PNG";
     } else if (computerScore === 5) {
-        document.getElementById("you").src="pictures/tally5.PNG";
+        document.getElementById("computer").src="pictures/tally5.PNG";
     } else {
         return;
     }

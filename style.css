@@ -3,6 +3,11 @@
     src: url(/assets/fonts/poppins.regular.ttf);
 }
 
+@font-face {
+    font-family: custom-scary;
+    src: url(/assets/fonts/);
+}
+
 h1, h2, p {
     font-family: custom;
 }
@@ -20,18 +25,27 @@ h1, h2, p {
 
 .options {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 
 .options img {
-    height: 300px;
-    margin: 60px 0;
+    height: 400px;
+    width: 400px;
 }
+
+#rock, #paper, #scissors {
+    border: none;
+    background-color: red;
+    height: 400px; width: 400px;
+    outline: none;
+}
+
+
 
 .idScore {
     display: flex;
     justify-content: center;
-    margin: 20px 0;
+    margin: 100px 0;
 }
 
 .idScore img {
