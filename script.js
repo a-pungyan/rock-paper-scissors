@@ -18,13 +18,6 @@ write logic to play single round
 whole game will be 5 rounds
 function playGame will call playRound 5 times
 */
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-function playGame() {
-    for ( i = 0 ; i <= 5 ; i ++ ) {
-        playRound()
-=======
 
 let gameState = "preGame"
 
@@ -35,10 +28,6 @@ function playGame(gameState) {
     } else if (humanScore === 5 || computerScore === 5) {
         gameState ="gameOver";
         return;
->>>>>>> a11c51fb282862ede55f8f3a5d3aa84d15e35641
-    }
-}
->>>>>>> f30b4f8762a2907e44e732e822f823fdd9488e57
 
 let humanScore = 0;
 let computerScore = 0;
@@ -108,25 +97,6 @@ function updateHumanScore(humanScore) {
     }
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-function playGame() {
-    playRound();
-    playRound();
-    playRound();
-    playRound();
-    playRound();
-
-}
-=======
-
-    
-
->>>>>>> f30b4f8762a2907e44e732e822f823fdd9488e57
-    
-/*  */
-
-=======
 function updateComputerScore(computerScore) {
     if (computerScore === 0) {
         document.getElementById("you").src="";
@@ -144,4 +114,4 @@ function updateComputerScore(computerScore) {
         return;
     }
 }
->>>>>>> a11c51fb282862ede55f8f3a5d3aa84d15e35641
+
