@@ -18,21 +18,13 @@ write logic to play single round
 whole game will be 5 rounds
 function playGame will call playRound 5 times
 */
-
-let gameState = "preGame"
-
-function playGame(gameState) {
-    var gameState = "inGame";
-    if (humanScore < 5 && computerScore < 5) {
-        playRound();
-    } else if (humanScore === 5 || computerScore === 5) {
-        gameState ="gameOver";
-        return;
-    }}
-    
 let humanScore = 0;
 let computerScore = 0;
 let computerChoice = "";
+
+while(computerScore < 5 || humanScore < 5){
+    
+}
 
 function getComputerChoice() {
     return Math.floor(Math.random() * 3);
@@ -47,68 +39,13 @@ function getComputerChoice() {
         return NaN;
 }}
 
+const buttons = document.querySelectorAll(".options button")
 
+buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+        const humanChoice = button.id;
+        playRound(humanChoice, getComputerChoice());
+    })
+})
 
-function getHumanChoice() {
-    document.getElementById("rock").addEventListener("click")
-}
-
-
-function didUserWin(humanChoice, computerChoice) {
-    if ((humanChoice = "rock") && (computerChoice = "paper")) {
-        humanScore += 1;
-    } else if ((humanChoice = "paper") && (computerChoice = "rock")) {
-        humanScore += 1;
-    } else if ((humanChoice = "scissors") && (computerChoice = "paper")) {
-        humanScore += 1;
-    } else if (humanChoice == computerChoice) {
-        humanScore += 0;
-        computerScore += 0;
-    } else {
-        humanScore += 0;
-        computerScore += 0;
-        return;
-    }
-}
-
-function playRound(humanChoice, computerChoice) { 
-
-    return;
-}
-
-function updateHumanScore(humanScore) {
-    if (humanScore === 0) {
-        document.getElementById("you").src="";
-    } else if (humanScore === 1) {
-        document.getElementById("you").src="pictures/tally1.PNG";
-    } else if (humanScore === 2) {
-        document.getElementById("you").src="pictures/tally2.PNG";
-    } else if (humanScore === 3) {
-        document.getElementById("you").src="pictures/tally3.PNG";
-    } else if (humanScore === 4) {
-        document.getElementById("you").src="pictures/tally4.PNG";
-    } else if (humanScore === 5) {
-        document.getElementById("you").src="pictures/tally5.PNG";
-    } else {
-        return; 
-    }
-}
-
-function updateComputerScore(computerScore) {
-    if (computerScore === 0) {
-        document.getElementById("computer").src="";
-    } else if (computerScore === 1) {
-        document.getElementById("computer").src="pictures/tally1.PNG";
-    } else if (computerScore === 2) {
-        document.getElementById("computer").src="pictures/tally2.PNG";
-    } else if (computerScore === 3) {
-        document.getElementById("computer").src="pictures/tally3.PNG";
-    } else if (computerScore === 4) {
-        document.getElementById("computer").src="pictures/tally4.PNG";
-    } else if (computerScore === 5) {
-        document.getElementById("computer").src="pictures/tally5.PNG";
-    } else {
-        return;
-    }
-}
-
+console.log(humanChoice);

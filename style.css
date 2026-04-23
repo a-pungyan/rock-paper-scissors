@@ -1,11 +1,6 @@
 @font-face {
     font-family: custom;
-    src: url(/assets/fonts/poppins.regular.ttf);
-}
-
-@font-face {
-    font-family: custom-scary;
-    src: url(/assets/fonts/);
+    src: url('/assets/fonts/poppins.regular.ttf');
 }
 
 h1, h2, p {
@@ -16,6 +11,10 @@ h1, h2, p {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+#rps {
+    font-family: scary;
 }
 
 #first  {
@@ -35,9 +34,14 @@ h1, h2, p {
 
 #rock, #paper, #scissors {
     border: none;
-    background-color: red;
     height: 400px; width: 400px;
     outline: none;
+    background-color: transparent;
+}
+
+
+#youTally, #computerTally { 
+    height: 80px; width: 80px;
 }
 
 
