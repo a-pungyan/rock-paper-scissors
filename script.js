@@ -25,16 +25,16 @@ let humanChoice = "";
 
 
 function getComputerChoice() { //gets computer choice
-    return Math.floor(Math.random() * 3);
+    computerChoice = Math.floor(Math.random() * 3) + 1;
     
-    if (getComputerChoice() === 0) {
+    if (computerChoice === 1) {
         return computerChoice="rock";
-    } else if (getComputerChoice() === 1) {
+    } else if (computerChoice === 2) {
         return computerChoice="paper";
-    } else if (getComputerChoice() === 2) {
+    } else if (computerChoice === 3) {
         return computerChoice="scissors";
     } else {
-        return NaN;
+        return;
 }}
 
 const buttons = document.querySelectorAll(".options button")
@@ -47,9 +47,9 @@ buttons.forEach((button) => { //gets human choice on click on their choice
 })
 
 function playRound(humanChoice, computerChoice) {
-    getComputerChoice();
+    computerChoice = getComputerChoice();
     if (computerChoice === humanChoice) {
-        return NaN;
+        return;
     } else if (humanChoice === "rock" && computerChoice === "scissors"){
         humanScore ++;
     } else if (humanChoice === "paper" && computerChoice === "rock") {
@@ -62,26 +62,30 @@ function playRound(humanChoice, computerChoice) {
 
 // update tallies
     if(humanScore === 1) {
-        document.getElementById("humanTally").src = "assets/pictures/tally1.png";
+        document.getElementById("humanTally").src = "assets/pictures/tally1.PNG";
     } else if(humanScore === 2) {
-        document.getElementById("humanTally").src = "assets/pictures/tally2.png";
+        document.getElementById("humanTally").src = "assets/pictures/tally2.PNG";
     } else if(humanScore === 3) {
-        document.getElementById("humanTally").src = "assets/pictures/tally3.png";
+        document.getElementById("humanTally").src = "assets/pictures/tally3.PNG";
     } else if(humanScore === 4) {
-        document.getElementById("humanTally").src = "assets/pictures/tally4.png";
+        document.getElementById("humanTally").src = "assets/pictures/tally4.PNG";
     } else if(humanScore === 5) {
-        document.getElementById("humanTally").src = "assets/pictures/tally5.png";
-    } 
+        document.getElementById("humanTally").src = "assets/pictures/tally5.PNG";
+    } else {
+        NaN;
+    }
 
     if(computerScore === 1) {
-        document.getElementById("computerTally").src = "assets/pictures/tally1.png";
+        document.getElementById("computerTally").src = "assets/pictures/tally1.PNG";
     } else if(computerScore === 2) {
-        document.getElementById("computerTally").src = "assets/pictures/tally2.png";
+        document.getElementById("computerTally").src = "assets/pictures/tally2.PNG";
     } else if(computerScore === 3) {
-        document.getElementById("computerTally").src = "assets/pictures/tally3.png";
+        document.getElementById("computerTally").src = "assets/pictures/tally3.PNG";
     } else if(computerScore === 4) {
-        document.getElementById("computerTally").src = "assets/pictures/tally4.png";
+        document.getElementById("computerTally").src = "assets/pictures/tally4.PNG";
     } else if(computerScore === 5) {
-        document.getElementById("computerTally").src = "assets/pictures/tally5.png";
-    } 
+        document.getElementById("computerTally").src = "assets/pictures/tally5.PNG";
+    } else {
+        NaN;
+    }
 }
