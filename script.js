@@ -21,31 +21,42 @@ function playGame will call playRound 5 times
 let humanScore = 0;
 let computerScore = 0;
 let computerChoice = "";
+let humanChoice = "";
 
-while(computerScore < 5 || humanScore < 5){
-    
-}
 
-function getComputerChoice() {
+function getComputerChoice() { //gets computer choice
     return Math.floor(Math.random() * 3);
     
     if (getComputerChoice() === 0) {
-        return "rock";
+        return computerChoice="rock";
     } else if (getComputerChoice() === 1) {
-        return "paper";
+        return computerChoice="paper";
     } else if (getComputerChoice() === 2) {
-        return "scissors";
+        return computerChoice="scissors";
     } else {
         return NaN;
 }}
 
 const buttons = document.querySelectorAll(".options button")
 
-buttons.forEach((button) => {
+buttons.forEach((button) => { //gets human choice on click on their choice
     button.addEventListener("click", () => {
-        const humanChoice = button.id;
-        playRound(humanChoice, getComputerChoice());
+        humanChoice = button.id;
+        playRound(humanChoice, computerChoice);
     })
 })
 
-console.log(humanChoice);
+function playRound(humanChoice, computerChoice) {
+    getComputerChoice();
+    if (computerChoice === humanChoice) {
+        return NaN;
+    } else if (humanChoice === "rock" && computerChoice === "scissors"){
+        humanScore ++;
+    } else if (humanChoice === "paper" && computerChoice === "rock") {
+        humanScore++;
+    } else if (humanChoice === "scissors" && computerChoice === "paper") {
+        humanScore++;
+    } else {
+        computerScore++;
+    }
+}
