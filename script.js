@@ -59,4 +59,29 @@ function playRound(humanChoice, computerChoice) {
     } else {
         computerScore++;
     }
+
+// update tallies
+    if(humanScore === 1) {
+        document.getElementById("humanTally").src = "assets/pictures/tally1.png";
+    } else if(humanScore === 2) {
+        document.getElementById("humanTally").src = "assets/pictures/tally2.png";
+    } else if(humanScore === 3) {
+        document.getElementById("humanTally").src = "assets/pictures/tally3.png";
+    } else if(humanScore === 4) {
+        document.getElementById("humanTally").src = "assets/pictures/tally4.png";
+    } else if(humanScore === 5) {
+        document.getElementById("humanTally").src = "assets/pictures/tally5.png";
+    } 
+
+    if(computerScore === 1) {
+        document.getElementById("computerTally").src = "assets/pictures/tally1.png";
+    } else if(computerScore === 2) {
+        document.getElementById("computerTally").src = "assets/pictures/tally2.png";
+    } else if(computerScore === 3) {
+        document.getElementById("computerTally").src = "assets/pictures/tally3.png";
+    } else if(computerScore === 4) {
+        document.getElementById("computerTally").src = "assets/pictures/tally4.png";
+    } else if(computerScore === 5) {
+        document.getElementById("computerTally").src = "assets/pictures/tally5.png";
+    } 
 }
