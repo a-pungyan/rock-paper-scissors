@@ -62,29 +62,29 @@ function playRound(humanChoice, computerChoice) {
 
 // update tallies
     if(humanScore === 1) {
-        document.getElementById("humanTally").src = "assets/pictures/tally1.PNG";
+        document.getElementById("humanTally").src = "assets/pictures/tally1.png";
     } else if(humanScore === 2) {
-        document.getElementById("humanTally").src = "assets/pictures/tally2.PNG";
+        document.getElementById("humanTally").src = "assets/pictures/tally2.png";
     } else if(humanScore === 3) {
-        document.getElementById("humanTally").src = "assets/pictures/tally3.PNG";
+        document.getElementById("humanTally").src = "assets/pictures/tally3.png";
     } else if(humanScore === 4) {
-        document.getElementById("humanTally").src = "assets/pictures/tally4.PNG";
+        document.getElementById("humanTally").src = "assets/pictures/tally4.png";
     } else if(humanScore === 5) {
-        document.getElementById("humanTally").src = "assets/pictures/tally5.PNG";
+        document.getElementById("humanTally").src = "assets/pictures/tally5.png";
     } else {
         NaN;
     }
 
     if(computerScore === 1) {
-        document.getElementById("computerTally").src = "assets/pictures/tally1.PNG";
+        document.getElementById("computerTally").src = "assets/pictures/tally1.png";
     } else if(computerScore === 2) {
-        document.getElementById("computerTally").src = "assets/pictures/tally2.PNG";
+        document.getElementById("computerTally").src = "assets/pictures/tally2.png";
     } else if(computerScore === 3) {
-        document.getElementById("computerTally").src = "assets/pictures/tally3.PNG";
+        document.getElementById("computerTally").src = "assets/pictures/tally3.png";
     } else if(computerScore === 4) {
-        document.getElementById("computerTally").src = "assets/pictures/tally4.PNG";
+        document.getElementById("computerTally").src = "assets/pictures/tally4.png";
     } else if(computerScore === 5) {
-        document.getElementById("computerTally").src = "assets/pictures/tally5.PNG";
+        document.getElementById("computerTally").src = "assets/pictures/tally5.png";
     } else {
         NaN;
     }
