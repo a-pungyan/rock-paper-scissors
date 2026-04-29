@@ -76,6 +76,7 @@ function playRound(humanChoice, computerChoice) {
         document.getElementById("humanTally").src = "assets/pictures/tally4.PNG";
     } else if(humanScore === 5) {
         document.getElementById("humanTally").src = "assets/pictures/tally5.PNG";
+        document.getElementById("whoWon").textContent = `you won the round! wow you're so cool`
     } else {
         NaN;
     }
@@ -90,6 +91,7 @@ function playRound(humanChoice, computerChoice) {
         document.getElementById("computerTally").src = "assets/pictures/tally4.PNG";
     } else if(computerScore === 5) {
         document.getElementById("computerTally").src = "assets/pictures/tally5.PNG";
+        document.getElementById("whoWon").textContent = `computer won the round! womp womp`
     } else {
         NaN;
     }
