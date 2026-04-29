@@ -40,32 +40,29 @@ h1, h2, p {
 }
 
 
-#youTally, #computerTally { 
+#humanTally, #computerTally { 
     height: 80px; width: 80px;
     border: none;
 }
 
 
-
+.displayStatus {
+    display: flex; flex-direction: column;
+    justify-content: center; align-items: center;
+}
 .idScore {
     display: flex;
     justify-content: center;
-    margin: 100px 0;
+    margin-right: 30px;
+}
+
+#human, #computer {
+    display: flex; flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
 }
 
 .idScore img {
     height: 80px;
-    margin: -10px 0 0 0;
-}
-
-#computer {
-    margin: 0 60px;
-    display: flex;
-    flex-direction: column;
-}
-
-#you {
-    margin: 0 60px;
-    display: flex;
-    flex-direction: column;
 }

@@ -43,21 +43,26 @@ buttons.forEach((button) => { //gets human choice on click on their choice
     button.addEventListener("click", () => {
         humanChoice = button.id;
         playRound(humanChoice, computerChoice);
+        document.getElementById("status").textContent = `computer selected: ${computerChoice}`
     })
 })
 
 function playRound(humanChoice, computerChoice) {
     computerChoice = getComputerChoice();
     if (computerChoice === humanChoice) {
-        return;
+        document.getElementById("whoWon").textContent = `it's a tie`;
     } else if (humanChoice === "rock" && computerChoice === "scissors"){
         humanScore ++;
+        document.getElementById("whoWon").textContent = `you won`
     } else if (humanChoice === "paper" && computerChoice === "rock") {
         humanScore++;
+        document.getElementById("whoWon").textContent = `you won`
     } else if (humanChoice === "scissors" && computerChoice === "paper") {
         humanScore++;
+        document.getElementById("whoWon").textContent = `you won`
     } else {
         computerScore++;
+        document.getElementById("whoWon").textContent = `computer won`
     }
 
 // update tallies
